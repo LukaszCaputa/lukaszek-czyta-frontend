@@ -1,11 +1,12 @@
 <template>
   <div class="home-view-container">
-    Home view ... {{ booksCount }}
+    Home view ...<br>
 
-    <BookItem title="Jak to zrobic?" author="Ignacy" bookId="123"/>
+      <div v-for="item in getAllBooks" :key="item.id">
+        <BookItem :title=item.title :author=item.author :bookId=item.id />
+      </div>
 
-    <BookItem title="Sturm" author="Van der Wellen" bookId="123"/>
-
+Books count: {{ booksCount }}
   </div>
 </template>
 

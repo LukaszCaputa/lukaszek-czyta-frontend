@@ -1,14 +1,21 @@
 <template>
-  <div class="bookItem">
-    <h1>{{ title }}</h1>
-    <h2>{{ author }}</h2>
-    <h3>test</h3>
+
+    <div>
+    <b-card
+        :title="title"
+        :sub-title="author"
+    >
+        <b-card-text>
+        Lorem ipsum
+        </b-card-text>
 
         <router-link :to="`/book/${bookId}`">
-          Wiecej
+          <b-button  variant="primary">Wiecej</b-button>
         </router-link>
 
-  </div>
+    </b-card>
+    </div>
+
 </template>
 
 <script>
@@ -22,8 +29,4 @@ export default {
 </script>
 
 <style scoped>
-    .bookItem {
-        offset: 25px;
-        background-color: grey;
-    }
 </style>
