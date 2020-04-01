@@ -1,13 +1,28 @@
 <template>
   <div class="home-view-container">
-    Empty home view ...
+    Home view ... {{ booksCount }}
+
+    <BookItem title="Jak to zrobic?" author="Ignacy" bookId="123"/>
+
+    <BookItem title="Sturm" author="Van der Wellen" bookId="123"/>
+
   </div>
 </template>
 
 <script>
-// import HelloWorld from '@/components/HelloWorld.vue'
+import BookItem from '@/components/BookItem.vue'
+import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Home'
+  name: 'home',
+  components: {
+    BookItem
+  },
+  computed: {
+    ...mapGetters([
+      'booksCount',
+      'getAllBooks'
+    ])
+  }
 }
 </script>
