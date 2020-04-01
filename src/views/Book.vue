@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <h3>detail view</h3>
+    <h3>detail view - {{ $route.params.bookId }}</h3>
 
   </div>
 </template>
