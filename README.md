@@ -1,5 +1,7 @@
 # lukaszek-czyta-frontend
 
+Project of frontend for lukaszek-czyta
+
 ## Project setup
 ```
 npm install
@@ -24,6 +26,3 @@ npm run test:unit
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
