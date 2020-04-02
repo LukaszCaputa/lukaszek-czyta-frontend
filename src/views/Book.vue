@@ -10,7 +10,11 @@
 
       <b-row>
         <b-col cols="2">Polecam ?</b-col>
-        <b-col>{{ bookObject.recommendation }}</b-col>
+        <b-col>
+          <div v-if="bookObject.recommendation === 0"> <v-icon name="thermometer-empty" ></v-icon> </div>
+          <div v-if="bookObject.recommendation === 1"> <v-icon name="thermometer-half" ></v-icon> </div>
+          <div v-if="bookObject.recommendation === 2"> <v-icon name="thermometer-full" ></v-icon> </div>
+        </b-col>
       </b-row>
 
       <b-row>
@@ -33,6 +37,7 @@
       </b-row>
 
     </b-container>
+
   </b-jumbotron>
   <router-link :to="`/`">
           <b-button  variant="primary">Back</b-button>

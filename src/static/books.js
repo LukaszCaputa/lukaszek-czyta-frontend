@@ -14,7 +14,7 @@ export default [
     title: 'Book2',
     author: 'auth2',
     tags: ['tag3', 'tag5'],
-    recommendation: 0,
+    recommendation: 1,
     readDate: '2020-01-01',
     lead: 'lead 2',
     notes: 'some notes 2'
@@ -24,7 +24,7 @@ export default [
     title: 'Book3',
     author: 'auth3',
     tags: ['tag1', 'tag3'],
-    recommendation: 0,
+    recommendation: 2,
     readDate: '2020-01-01',
     lead: 'lead 3',
     notes: 'some notes 3'
