@@ -2,16 +2,22 @@
 
     <div>
     <b-card
-        :title="title"
-        :sub-title="author"
+        :title="bookObject.title"
+        :sub-title="bookObject.author"
     >
         <b-card-text>
-        Lorem ipsum
+        {{ bookObject. lead }}
         </b-card-text>
 
-        <router-link :to="`/book/${bookId}`">
+        <router-link :to="`/book/${bookObject.id}`">
           <b-button  variant="primary">Wiecej</b-button>
         </router-link>
+
+        <template v-slot:footer>
+            <em v-for="(tag,index) in bookObject.tags" :key="index">
+                <b-badge variant="success">{{ tag }}</b-badge>
+            </em>
+        </template>
 
     </b-card>
     </div>
@@ -21,9 +27,7 @@
 <script>
 export default {
   props: {
-    title: String,
-    author: String,
-    bookId: Number
+    bookObject: Object
   }
 }
 </script>

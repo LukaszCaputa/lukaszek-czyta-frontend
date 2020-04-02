@@ -1,9 +1,8 @@
 <template>
   <div class="home-view-container">
-    Home view ...<br>
 
       <div v-for="item in getAllBooks" :key="item.id">
-        <BookItem :title=item.title :author=item.author :bookId=item.id />
+        <BookItem :bookObject=item />
       </div>
 
 Books count: {{ booksCount }}
