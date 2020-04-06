@@ -1,15 +1,19 @@
 <template>
-  <div>
+  <b-container class="bookFullPage">
+    <b-row>
+      <b-col>
+        <h1>{{ bookObject.title }}</h1>
+        <h4>{{ bookObject.author }}</h4>
+      </b-col>
+    </b-row>
 
-  <b-jumbotron :header="bookObject.title" :lead="bookObject.author">
-    <b-container class="bv-example-row">
       <b-row>
-        <b-col cols="2">Lead</b-col>
+        <b-col cols="2" class="text-muted">Lead</b-col>
         <b-col>{{ bookObject.lead }}</b-col>
       </b-row>
 
       <b-row>
-        <b-col cols="2">Polecam ?</b-col>
+        <b-col cols="2" class="text-muted">Polecam ?</b-col>
         <b-col>
           <div v-if="bookObject.recommendation === 0"> <v-icon name="thermometer-empty" ></v-icon> </div>
           <div v-if="bookObject.recommendation === 1"> <v-icon name="thermometer-half" ></v-icon> </div>
@@ -18,12 +22,12 @@
       </b-row>
 
       <b-row>
-        <b-col cols="2">Data przeczytania</b-col>
+        <b-col cols="2" class="text-muted">Data przeczytania</b-col>
         <b-col>{{ bookObject.readDate }}</b-col>
       </b-row>
 
       <b-row>
-        <b-col cols="2">Tagi</b-col>
+        <b-col cols="2" class="text-muted">Tagi</b-col>
         <b-col>
           <em v-for="(tag,index) in bookObject.tags" :key="index">
             <b-badge variant="success">{{ tag }}</b-badge>
@@ -32,17 +36,19 @@
       </b-row>
 
       <b-row>
-        <b-col cols="2">Notatki</b-col>
+        <b-col cols="2" class="text-muted">Notatki</b-col>
         <b-col>{{ bookObject.notes }}</b-col>
       </b-row>
 
-    </b-container>
+      <b-row >
+        <b-col class="text-right">
+          <router-link :to="`/`">
+            <b-button  variant="primary">Back</b-button>
+          </router-link>
+        </b-col>
+      </b-row>
 
-  </b-jumbotron>
-  <router-link :to="`/`">
-          <b-button  variant="primary">Back</b-button>
-        </router-link>
-  </div>
+    </b-container>
 </template>
 
 <script>
