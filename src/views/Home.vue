@@ -5,7 +5,9 @@
         <BookItem :bookObject=item />
       </div>
 
-Books count: {{ booksCount }}
+    <div class="booksCounter">
+      Books count: {{ booksCount }}
+    </div>
   </div>
 </template>
 

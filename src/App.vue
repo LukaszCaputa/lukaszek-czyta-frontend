@@ -14,8 +14,10 @@
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">Copyright 2020</span>
-        <router-link to="/contact">Kontakt</router-link>
+        <div class="row">
+          <div class="col-md-6"><span class="text-muted ">Copyright 2020</span></div>
+          <div class="col-md-6 text-right"><router-link to="/contact" class="text-muted">...Kontakt</router-link></div>
+        </div>
       </div>
     </footer>
 

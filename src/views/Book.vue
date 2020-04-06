@@ -55,14 +55,14 @@ export default {
   },
   computed: {
     ...mapState([
-      'books'
+      'booksDb'
     ])
   },
   mounted () {
     var bookElem
-    for (bookElem in this.books) {
-      if (parseInt(this.books[bookElem].id) === parseInt(this.$route.params.bookId)) { // FIXME
-        this.bookObject = this.books[bookElem]
+    for (bookElem in this.booksDb.books) {
+      if (parseInt(this.booksDb.books[bookElem].id) === parseInt(this.$route.params.bookId)) { // FIXME
+        this.bookObject = this.booksDb.books[bookElem]
         break
       }
     }
