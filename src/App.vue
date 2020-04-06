@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <b-nav tabs>
-      <b-nav-item active> <router-link to="/">Home</router-link></b-nav-item>
-      <b-nav-item><router-link to="/contact">Kontakt</router-link></b-nav-item>
-    </b-nav>
+    <div id="header">
+      <b-container>
+        <router-link to="/"><h1>Lukaszek czyta !</h1></router-link>
+      </b-container>
+    </div>
 
     <div id="pagecontent">
       <b-container>
@@ -14,6 +15,7 @@
     <footer class="footer">
       <div class="container">
         <span class="text-muted">Copyright 2020</span>
+        <router-link to="/contact">Kontakt</router-link>
       </div>
     </footer>
 

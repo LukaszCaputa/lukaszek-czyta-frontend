@@ -5,6 +5,7 @@ import 'vue-awesome/icons'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './static/sass/index.sass'
 
 import App from './App.vue'
 import router from './router'

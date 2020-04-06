@@ -1,6 +1,6 @@
 <template>
 
-    <div>
+    <div class="bookItemClass">
     <b-card
         :title="bookObject.title"
         :sub-title="bookObject.author"
