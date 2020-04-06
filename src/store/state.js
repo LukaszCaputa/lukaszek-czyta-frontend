@@ -1,5 +1,5 @@
-import books from '../static/books'
+import booksDb from '../static/books_db.json'
 
 export default {
-  books
+  booksDb
 }

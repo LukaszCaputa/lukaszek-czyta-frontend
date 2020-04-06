@@ -1,8 +1,8 @@
 export default {
   booksCount: (state) => {
-    return state.books.length
+    return state.booksDb.length
   },
   getAllBooks: (state) => {
-    return state.books
+    return state.booksDb.books
   }
 }
