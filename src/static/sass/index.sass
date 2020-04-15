@@ -20,6 +20,17 @@ body
 #footer
   background-color: white;
 
+#app 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+#pagecontent 
+  min-height: calc(100vh - 165px - 38px);
+  display: flex;
+  flex-direction: column;
+
 
 #header h1
   font-size: 110px;
@@ -31,7 +42,9 @@ body
 #header a, #header a:hover
     color: white;
     text-decoration: none;
-    cursor: auto;
+    cursor: pointer;
+    outline: none;
+
 
 .bookItemClass
     padding-bottom: 15px;
@@ -52,3 +65,8 @@ body
 .bookFullPage
     background-color: white;
     color: black;
+
+.footer-text
+  display: block;
+  height: 38px;
+  padding: 0.5rem 0;
