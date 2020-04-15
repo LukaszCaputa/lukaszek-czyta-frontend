@@ -12,14 +12,14 @@
       </b-container>
     </div>
 
-    <footer class="footer">
+    <div id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-6"><span class="text-muted ">Copyright 2020</span></div>
+          <div class="col-md-6"><span class="text-muted ">&#169; Copyright 2020</span></div>
           <div class="col-md-6 text-right"><router-link to="/contact" class="text-muted">...Kontakt</router-link></div>
         </div>
       </div>
-    </footer>
+    </div>
 
   </div>
 </template>
