@@ -19,7 +19,7 @@
         <div class="row">
           <div class="col-md-6"><span class="text-muted footer-text">&#169; Copyright 2020</span></div>
           <div class="col-md-6 text-right" >
-            <b-button variant="outline-dark" v-b-modal.modal-1 id="drazen">...Kontakt</b-button>
+            <b-button variant="outline-dark" v-b-modal.modal-1 id="contactBtn">...Kontakt</b-button>
 
             <b-modal id="modal-1" title="Kontakt">
               <p class="my-3">

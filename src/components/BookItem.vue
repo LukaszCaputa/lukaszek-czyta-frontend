@@ -20,8 +20,8 @@
                     </em>
                 </div>
                 <div class="col-md-6 text-right">
-                    <router-link :to="`/book/${bookObject.id}/${bookObject.title}`" >
-                        <b-button  variant="primary" >Wiecej</b-button>
+                    <router-link :to="`/book/${bookObject.id}/${bookObject.title}`">
+                        <b-button variant="primary" >Wiecej</b-button>
                     </router-link>
                 </div>
             </div>
