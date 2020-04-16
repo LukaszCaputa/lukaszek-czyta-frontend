@@ -2,6 +2,10 @@
 
 Project of frontend for lukaszek-czyta
 
+## Endpoint
+
+http://lukaszek-czyta-front.s3-website.eu-central-1.amazonaws.com/
+
 ## Project setup
 ```
 npm install

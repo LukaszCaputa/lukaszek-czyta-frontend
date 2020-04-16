@@ -16,19 +16,24 @@
 
     <div id="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-md-6"><span class="text-muted footer-text">&#169; Copyright 2020</span></div>
-          <div class="col-md-6 text-right" >
-            <b-button variant="outline-dark" v-b-modal.modal-1 id="contactBtn">...Kontakt</b-button>
+        <b-row>
+          <b-col>
+            <span class="text-muted footer-text">&#169; Copyright 2020</span>
+          </b-col>
+          <b-col class="text-right">
 
-            <b-modal id="modal-1" title="Kontakt">
+            <div @click="$bvModal.show('modal-kontakt')" id="contactBtn" class="text-muted footer-text">
+              ...Kontakt
+            </div>
+
+            <b-modal id="modal-kontakt" title="Kontakt" ok-only>
               <p class="my-3">
-                <span class="text-muted ">Email: </span>
+                <span class="text-muted">Email: </span>
                 lukasz [at] lukaszcaputa.eu
               </p>
             </b-modal>
-            </div>
-        </div>
+          </b-col>
+        </b-row>
       </div>
     </div>
 
