@@ -1,11 +1,12 @@
 <template>
-  <b-container class="bookFullPage">
-    <b-row>
-      <b-col>
-        <h1>{{ bookObject.title }}</h1>
-        <h4>{{ bookObject.author }}</h4>
-      </b-col>
-    </b-row>
+  <b-card
+    :title="bookObject.title"
+    :sub-title="bookObject.author"
+  >
+
+      <b-row>
+        <b-img center thumbnail fluid width="150" :src="bookObject.img" alt="brakuje obrazka..." ></b-img>
+      </b-row>
 
       <b-row>
         <b-col cols="2" class="text-muted">Lead</b-col>
@@ -15,9 +16,24 @@
       <b-row>
         <b-col cols="2" class="text-muted">Polecam ?</b-col>
         <b-col>
-          <div v-if="bookObject.recommendation === 0"> <v-icon name="thermometer-empty" ></v-icon> </div>
-          <div v-if="bookObject.recommendation === 1"> <v-icon name="thermometer-half" ></v-icon> </div>
-          <div v-if="bookObject.recommendation === 2"> <v-icon name="thermometer-full" ></v-icon> </div>
+          <div v-if="bookObject.recommendation === 0">
+            <v-icon name="thermometer-empty" id="tooltip-target-empty"></v-icon>
+            <b-tooltip target="tooltip-target-empty" triggers="hover">
+              Nie polecam ...
+            </b-tooltip>
+          </div>
+          <div v-else-if="bookObject.recommendation === 1">
+            <v-icon name="thermometer-half" id="tooltip-target-half"></v-icon>
+            <b-tooltip target="tooltip-target-half" triggers="hover">
+              Ciekawa pozycja, ale mozna zyc i bez niej :)
+            </b-tooltip>
+          </div>
+          <div v-else-if="bookObject.recommendation === 2">
+            <v-icon name="thermometer-full" id="tooltip-target-full"></v-icon>
+            <b-tooltip target="tooltip-target-full" triggers="hover">
+              Ksiazka naprawde bardzo warta uwagi !
+            </b-tooltip>
+          </div>
         </b-col>
       </b-row>
 
@@ -40,15 +56,17 @@
         <b-col>{{ bookObject.notes }}</b-col>
       </b-row>
 
-      <b-row >
-        <b-col class="text-right">
-          <router-link :to="`/`">
-            <b-button  variant="primary">Back</b-button>
-          </router-link>
-        </b-col>
-      </b-row>
+      <template v-slot:footer>
+        <b-row >
+          <b-col class="text-right">
+            <router-link :to="`/`">
+              <b-button  variant="primary">Back</b-button>
+            </router-link>
+          </b-col>
+        </b-row>
+      </template>
 
-    </b-container>
+    </b-card>
 </template>
 
 <script>
